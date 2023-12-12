@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - My Personal Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @font-face {
+            font-family: 'White Rabbit';
+            src: url('./whitrabt.woff2') format('woff2'),
+                 url('./whitrabt.woff') format('woff');
+        }
+
+        body {
+            font-family: 'White Rabbit', sans-serif;
+            background-color: #f7fafc;
+            margin: 0;
+        }
+
+        .nav-item {
+            display: inline-block;
+            margin-right: 1rem;
+        }
+
+        .nav-item:last-child {
+            margin-right: 0;
+        }
+
+        .content-box, .counter-container {
+            background-color: white;
+            border: 1px solid #e5e7eb;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.05);
+        }
+
+        .counter-container {
+            margin: 0 auto;
+            width: fit-content;
+        }
+
+        @keyframes blink {
+            0% {opacity: 1;}
+            50% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+
+        .blinking-cursor {
+            animation: blink 1s infinite;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-white py-4">
+        <div class="container mx-auto px-4">
+        <nav class="flex justify-between items-center">
+        <div class="flex items-center">
+        <span class="text-xl">Daniel Wilson's personal blog</span>
+        </div>
+        <div class="flex justify-end">
+        <a class="nav-item" href="mailto:danielwilson@xriglobal.ai" title="Contact">Contact</a>
+        <a class="nav-item" href="index.html" title="Home">Home</a>
+        </div>
+        </nav>
+        </div>
+        </header>
+
+
+
+        <main class="flex justify-center pt-8">
+            <div class="max-w-4xl w-full px-4">
+                <article class="p-8">
+                    <h1 class="pb-4">Why not let their language die?</h1> <!-- Added bottom padding -->
+                    <p class="pb-4">Posted on [Insert Date]</p> <!-- Added bottom padding -->
+                    <section class="pt-4"> <!-- Added top padding -->
+                        <p>
+                           I often here the same things
+                        </p>
+                        <!-- This is a snippet of a poem about languages -->
+                    </section>
+                </article>
+
+                <article class="p-8">
+                    <h1 class="pb-4">Second one!</h1> <!-- Added bottom padding -->
+                    <p class="pb-4">Posted on [Insert Date]</p> <!-- Added bottom padding -->
+                    <section class="pt-4"> <!-- Added top padding -->
+                        <p>
+                            Now here is the second
+                        </p>
+                    </section>
+                </article>
+            </div>
+        </main>
+        
+        
+        
+
+    <footer>
+        <!-- Footer from your index.html -->
+    </footer>
+</body>
+</html>

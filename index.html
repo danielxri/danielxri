@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Daniel Wilson's personal page</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+        @font-face {
+            font-family: 'White Rabbit';
+            src: url('./whitrabt.woff2') format('woff2'),
+                 url('./whitrabt.woff') format('woff');
+        }
+
+        body {
+            font-family: 'White Rabbit', sans-serif;
+            background-color: #f7fafc;
+            margin: 0;
+        }
+
+        .nav-item {
+            display: inline-block;
+            margin-right: 1rem;
+        }
+
+        .nav-item:last-child {
+            margin-right: 0;
+        }
+
+        .content-box, .counter-container {
+            background-color: white;
+            border: 1px solid #e5e7eb;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.05);
+        }
+
+        .counter-container {
+            margin: 0 auto;
+            width: fit-content;
+        }
+
+        @keyframes blink {
+            0% {opacity: 1;}
+            50% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+
+        .blinking-cursor {
+            animation: blink 1s infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+<header class="bg-white py-4">
+<div class="container mx-auto px-4">
+<nav class="flex justify-between items-center">
+<div class="flex items-center">
+<span class="text-xl">Daniel Wilson's personal page</span>
+</div>
+<div class="flex justify-end">
+<a class="nav-item" href="mailto:danielwilson@xriglobal.ai" title="Contact">Contact</a>
+<a class="nav-item" href="blog.html" title="Blog">Blog</a>
+</div>
+</nav>
+</div>
+</header>
+<body>
+<header class="bg-white py-4">
+<!-- Header content -->
+</header>
+<main class="container mx-auto px-4 py-8">
+<section class="content-box">
+<h1 class="text-lg">Who am I?</h1>
+<p class="text-sm mt-4">I am the founder and CEO of XRI Global. I have a PhD in linguistics and have published books and research articles in both theoretical and field linguistics. I moved to Russia in my early 30's, learned to speak Russian, then did research on one of the most complex languages in the world. I worked in the non-profit sector for 6 years, deploying language technology solutions in over 15 countries.</p>
+</section>
+<section class="content-box">
+<h2 class="text-lg">What problem am I solving?</h2>
+<p class="text-sm mt-4"><b>AI doesn't know very many languages.</b> This means that the benefits of AI will only be experienced by those who speak these few languages. For those counting (we are) this excludes about 2 billion people.</p>
+</section>
+<section class="content-box">
+<h2 class="text-lg">How am I solving it?</h2>
+<p class="text-sm mt-4">Hiring the most talented AI engineers in the world, collecting data from every language, and building new translation systems uniquely designed to work with large language models.</p>
+</section>
+<section class="content-box">
+<h2 class="text-lg">Yea, but do you have any traction?</h2>
+<p class="text-sm mt-4">yes. We have built systems for 5 languages already. We have contracts for 50 more in 2024. We have an AI agent that can learn a language by interacting with a native speaker. We have an app that is collecting large amounts of language data all over the world as we speak.</p>
+</section>
+<section class="content-box">
+<h2 class="text-lg">Social media</h2>
+<p class="text-sm mt-4">Twitter: @geoframeai</p>
+</section>
+<section class="content-box">
+<h2 class="text-lg">Subscribe to follow along<span class="blinking-cursor">|</span></h2>
+<!-- Insert subscription form or link here if needed -->
+</section>
+<section class="container mx-auto px-4 counter-container" x-data="counter()" x-init="init()">
+<h1 class="block text-gray-700 text-sm font-bold mb-2">Sentences contributed</h1>
+<p class="text-gray-700 text-3xl" x-text="formatNumber(count)"></p>
+</section>
+</main>
+<footer class="bg-white py-4">
+<div class="container mx-auto px-4 text-center">
+<p class="text-sm">© 2023 Daniel Wilson. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('counter', () => ({
+                count: 106345002,
+                increment() {
+                    this.count++;
+                },
+                init() {
+                    setInterval(() => this.increment(), 1000 / 3);
+                },
+                formatNumber(number) {
+                    return new Intl.NumberFormat().format(number);
+                }
+            }));
+        });
+    </script>
+<script defer="" src="https://unpkg.com/alpinejs"></script>
+</body>
+</body></html>
